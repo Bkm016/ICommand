@@ -1,0 +1,121 @@
+# ************ #
+# 触发器优先级 #
+# ************ #
+# - LOWEST     #
+# - LOW        #
+# - NORMAL     #
+# - HIGH       #
+# - HIGHEST    #
+# - MONITOR    #
+# ************ #
+EventPriority:
+  # 玩家事件
+  PLAYER: NORMAL
+  # 攻击事件
+  DAMAGE: NORMAL
+  # 消耗事件
+  CONSUME: NORMAL
+  # 方块操作事件
+  BLOCK: NORMAL
+  # 方块交互事件
+  INTERACT_BLOCK: NORMAL
+  # 实体交互事件
+  INTERACT_ENTITY: NORMAL
+  
+# 插件设置
+Settings:
+  # 语言文件
+  Language: 'zh_CN'
+  # 是否启用 Nashorn 引擎, 即 "Require", "ExecureCode" 等需要 Nashorn 引擎的功能。
+  EnableNashorn: true
+  # 禁用类型（建议禁用一些不常用且触发频率较高的类型）
+  DisableType:
+  - 'PLAYER_SNEAK'
+
+# 参数传递
+TransmissionParameter:
+  # 伤害表达式
+  Damage:
+    # 玩家对象
+    Player: 
+      Enable: true
+      Key: 'player'
+    # 事件对象
+    Event: 
+      Enable: true
+      Key: 'event'
+    # 事件类型
+    Type: 
+      Enable: true
+      Key: 'type'
+    # 物品位置
+    ItemSlot: 
+      Enable: true
+      Key: 'itemSlot'
+    # 物品对象
+    ItemStack: 
+      Enable: true
+      Key: 'itemStack'
+    # 物品类型
+    ItemType: 
+      Enable: true
+      Key: 'itemType'
+  # 要求表达式
+  Require:
+    # 玩家对象
+    Player: 
+      Enable: true
+      Key: 'player'
+    # 事件对象
+    Event: 
+      Enable: true
+      Key: 'event'
+    # 事件类型
+    Type: 
+      Enable: true
+      Key: 'type'
+    # 物品位置
+    ItemSlot: 
+      Enable: true
+      Key: 'itemSlot'
+    # 物品对象
+    ItemStack: 
+      Enable: true
+      Key: 'itemStack'
+    # 物品类型
+    ItemType: 
+      Enable: true
+      Key: 'itemType'
+  # 执行表达式
+  ExecuteCode:
+    # 玩家对象
+    Player: 
+      Enable: true
+      Key: 'player'
+    # 事件对象
+    Event: 
+      Enable: true
+      Key: 'event'
+    # 事件类型
+    Type: 
+      Enable: true
+      Key: 'type'
+    # 物品位置
+    ItemSlot: 
+      Enable: true
+      Key: 'itemSlot'
+    # 物品对象
+    ItemStack: 
+      Enable: true
+      Key: 'itemStack'
+    # 物品类型
+    ItemType: 
+      Enable: true
+      Key: 'itemType'
+    # 插件对象
+    Plugin:
+      Enable: true
+      Key: 'icommand'
+  
+# 调试提示
+DEBUG: false

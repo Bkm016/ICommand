@@ -1,0 +1,11 @@
+name: ICommand
+main: me.skymc.icommand.ICommandPlugin
+version: 1.0-SNAPSHOT
+
+authors: [坏黑]
+depends: [TabooLib]
+
+commands:
+  icommand:
+    aliases: [icmd]
+    permission: icommand.admin

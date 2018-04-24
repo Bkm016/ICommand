@@ -1,0 +1,89 @@
+SuperBread:
+  Lore: 'SuperBread'
+  Type: CONSUME
+  Commands:
+  - '[op] heal'
+  EnableHeld: true
+  
+SuperPickaxe:
+  Lore: 'SuperPickaxe'
+  Type: RIGHT_CLICK_BLOCK|RIGHT_CLICK_AIR
+  Commands: 
+  - '[op] /'
+  Cancelled: true
+  
+ZombieKiller:
+  Type: ATTACK
+  Lore: 'ZombieKiller'
+  Damage: '($damage + 10) * 1.5'
+  Target:
+    Type:
+    - ZOMBIE
+
+FallProtect:
+  Lore: 'FallProtect'
+  Type: DAMAGED_ALL
+  Commands:
+  - '[console] tell $player You^re immune to this damage!'
+  Target:
+    Cause: 
+    - FALL
+  Cancelled: true
+  
+CommandDelay:
+  Lore: 'CommandDelay'
+  Type: RIGHT_CLICK_BLOCK|RIGHT_CLICK_AIR
+  Commands:
+  - '[console] tell $player Execute command - 1'
+  - '[delay] 20'
+  - '[console] tell $player Execute command - 2'
+  - '[delay] 20'
+  - '[console] tell $player Execute command - 3'
+  
+CustomRequire:
+  Lore: 'CustomRequire'
+  Type: RIGHT_CLICK_BLOCK|RIGHT_CLICK_AIR
+  Commands:
+  - '[console] tell $player Executed CustomRequire!'
+  Require: '!player.hasPermission("CustomRequire")'
+  RequireMessage: '&4You don^t have permission to do it'
+  
+ExecuteCode:
+  Lore: 'ExecodeCode'
+  Type: RIGHT_CLICK_BLOCK|RIGHT_CLICK_AIR
+  Consume:
+    Enable: true
+    Amount: 1
+  ExecuteCode: 'player.sendMessage("Execode success!")'
+  
+BedRockBreaker:
+  Lore: 'BedRockBreaker'
+  Type: RIGHT_CLICK_BLOCK
+  Target:
+    Block:
+    - 'BEDROCK'
+  ExecuteCode: 'var material = Java.type("org.bukkit.Material"); event.getClickedBlock().setType(material.AIR);'
+  
+DiamondChest:
+  Lore: 'DiamondChest'
+  Type: BLOCK_PLACE
+  Contents:
+  - 'SpeedPotion 1 0.9'
+  
+SandBurner:
+  Type: BLOCK_BREAK
+  Target:
+    Block:
+    - SAND
+  Commands:
+  - '[console] give $player glass'
+  Cancelled: true
+  ExecuteCode: 'var material = Java.type("org.bukkit.Material"); event.getBlock().setType(material.AIR);'
+  
+ChatColor:
+  Type: PLAYER_CHAT
+  Message: '&6 -> &e$message'
+  Format: '&e[&6Lv.%player_level%&e]&7 $format'
+  Consume:
+    Enable: true
+    Amount: 1
