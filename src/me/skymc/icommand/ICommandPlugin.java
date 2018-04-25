@@ -58,9 +58,36 @@ public class ICommandPlugin extends JavaPlugin {
 		
 		Bukkit.getPluginCommand("icommand").setExecutor(new CommandHandler());
 		
-		ICommandLoader.registerItemType(ICommandItemDamage.class, "ATTACK", "DAMAGED_OTHER", "DAMAGED_ENTITY", "DAMAGED_BLOCK");
-		ICommandLoader.registerItemType(ICommandItemInteract.class, "RIGHT_CLICK_AIR", "RIGHT_CLICK_BLOCK", "LEFT_CLICK_BLOCK", "PHYSICAL", "RIGHT_CLICK_ENTITY", "BLOCK_BREAK", "BLOCK_PLACE");
-		ICommandLoader.registerItemType(ICommandItemPlayer.class, "PLAYER_TELEPORT", "PLAYER_CHAT", "PLAYER_SNEAK", "PLAYER_FISH");
+		ICommandLoader.registerItemType(ICommandItemDamage.class, 
+				"ATTACK", 
+				"DAMAGED_OTHER", 
+				"DAMAGED_ENTITY", 
+				"DAMAGED_BLOCK");
+		
+		ICommandLoader.registerItemType(ICommandItemInteract.class, 
+				"RIGHT_CLICK_ENTITY", 
+				"RIGHT_CLICK_AIR", 
+				"RIGHT_CLICK_BLOCK", 
+				"LEFT_CLICK_AIR", 
+				"LEFT_CLICK_BLOCK", 
+				"PHYSICAL", 
+				"BLOCK_BREAK", 
+				"BLOCK_PLACE",
+				"CONSUME");
+		
+		ICommandLoader.registerItemType(ICommandItemPlayer.class, 
+				"PLAYER_JOIN",
+				"PLAYER_QUIT",
+				"PLAYER_RESPAWN",
+				"PLAYER_DEATH",
+				"PLAYER_EXP_CHANGE",
+				"PLAYER_LEVEL_CHANGE",
+				"PLAYER_TELEPORT", 
+				"PLAYER_SNEAK", 
+				"PLAYER_CHAT", 
+				"PLAYER_FISH",
+				"PLAYER_SWAPHAND");
+		
 		ICommandLoader.createFolder();
 		ICommandLoader.reloadPriority();
 		
