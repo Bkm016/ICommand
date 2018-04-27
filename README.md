@@ -52,9 +52,9 @@ The execution order of items inside the **ICommnad**.
 **INTERACT**
 - RIGHT_CLICK_ENTITY
 - RIGHT_CLICK_BLOCK
-- RIGHT_CLICK_AIR
+- RIGHT_CLICK_AIR (Ignored Cancelled)
 - LEFT_CLICK_BLOCK
-- LEFT_CLICK_AIR
+- LEFT_CLICK_AIR (Ignored Cancelled)
 - BLOCK_PLACE
 - BLOCK_BREAK
 - PHYSICAL
